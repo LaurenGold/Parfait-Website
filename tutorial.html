@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Prepare custom planetary datasets in JMARS for exploration in Planetary Parfait." />
+  <title>Prepare Custom Datasets in JMARS | Planetary Parfait</title>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #f5f6f2;
+      --muted: #aeb7ba;
+      --line: #273238;
+      --panel: #11171b;
+      --accent: #18e3d0;
+      --bg: #070a0d;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 85% 8%, rgba(24, 227, 208, .10), transparent 28rem),
+        var(--bg);
+      font-family: "Courier New", Courier, monospace;
+      line-height: 1.65;
+    }
+    a { color: inherit; }
+    .wrap { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid rgba(255,255,255,.09);
+      background: rgba(7,10,13,.86);
+      backdrop-filter: blur(14px);
+    }
+    .nav { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { font-weight: 700; letter-spacing: .06em; text-decoration: none; }
+    .back { color: var(--accent); font-size: .82rem; letter-spacing: .12em; text-decoration: none; }
+    main { padding: 92px 0 110px; }
+    .eyebrow { margin: 0 0 16px; color: var(--accent); font-size: .78rem; letter-spacing: .2em; }
+    h1 { max-width: 900px; margin: 0; font-size: clamp(2.5rem, 7vw, 5.7rem); line-height: .98; letter-spacing: -.055em; }
+    .lede { max-width: 760px; margin: 30px 0 74px; color: var(--muted); font-size: clamp(1rem, 2vw, 1.25rem); }
+    .steps { border-top: 1px solid var(--line); }
+    .step {
+      display: grid;
+      grid-template-columns: 96px minmax(0, 1fr);
+      gap: 34px;
+      padding: 48px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .number { color: var(--accent); font-size: .82rem; letter-spacing: .15em; }
+    .step h2 { margin: -.18em 0 12px; font-size: clamp(1.35rem, 3vw, 2.1rem); line-height: 1.2; text-transform: uppercase; }
+    .step p { max-width: 760px; margin: 0; color: var(--muted); font-family: Arial, sans-serif; font-size: 1.06rem; }
+    figure { margin: 32px 0 0; }
+    figure img { display: block; width: 100%; max-width: 920px; border: 1px solid #34444a; }
+    figcaption { margin-top: 12px; color: #899497; font-family: Arial, sans-serif; font-size: .85rem; }
+    .cta {
+      margin-top: 72px;
+      padding: clamp(30px, 6vw, 64px);
+      border: 1px solid rgba(24,227,208,.42);
+      background: linear-gradient(135deg, rgba(24,227,208,.08), rgba(255,255,255,.02));
+    }
+    .cta h2 { margin: 0 0 10px; font-size: clamp(1.5rem, 4vw, 2.8rem); }
+    .cta p { margin: 0 0 26px; color: var(--muted); font-family: Arial, sans-serif; }
+    .button {
+      display: inline-block;
+      padding: 13px 19px;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      font-size: .78rem;
+      letter-spacing: .13em;
+      text-decoration: none;
+    }
+    .button:hover { color: #06100f; background: var(--accent); }
+    footer { padding: 34px 0; border-top: 1px solid var(--line); color: #768185; font-size: .75rem; }
+    @media (max-width: 650px) {
+      main { padding-top: 62px; }
+      .step { grid-template-columns: 1fr; gap: 12px; padding: 36px 0; }
+      .brand { font-size: .82rem; }
+      .back { letter-spacing: .07em; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="./">PLANETARY PARFAIT</a>
+      <a class="back" href="./">← BACK TO SITE</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <p class="eyebrow">JMARS WORKFLOW</p>
+    <h1>Prepare Custom Datasets in JMARS</h1>
+    <p class="lede">Build a scene from your planetary datasets in JMARS, then open that same scene in Planetary Parfait for immersive exploration.</p>
+
+    <section class="steps" aria-label="JMARS workflow instructions">
+      <article class="step">
+        <div class="number">001</div>
+        <div>
+          <h2>Prepare your data in JMARS</h2>
+          <p>Open the planetary datasets and layers you want to explore, then view them in the JMARS 3D window.</p>
+        </div>
+      </article>
+
+      <article class="step">
+        <div class="number">002</div>
+        <div>
+          <h2>Click the VR icon</h2>
+          <p>In the 3D window, select the VR icon to prepare your current view for immersive use.</p>
+          <figure>
+            <img src="./assets/jmars-vr-icon-guide.jpg" alt="JMARS interface with the VR icon highlighted in the Quick Access toolbar" />
+            <figcaption>The VR icon is the far-right button in the turquoise Quick Access toolbar.</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="step">
+        <div class="number">003</div>
+        <div>
+          <h2>Save the scene</h2>
+          <p>Save the terrain and your selected data layers as a scene.</p>
+        </div>
+      </article>
+
+      <article class="step">
+        <div class="number">004</div>
+        <div>
+          <h2>Open Planetary Parfait</h2>
+          <p>Sign in to Planetary Parfait with your JMARS credentials. Your saved scene will be ready to open and explore.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="cta">
+      <h2>Your data, ready for immersive exploration.</h2>
+      <p>Return to Planetary Parfait to learn more about the platform and collaboration opportunities.</p>
+      <a class="button" href="./">RETURN TO PLANETARY PARFAIT →</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">PLANETARY PARFAIT · JMARS INTEGRATION</div>
+  </footer>
+</body>
+</html>
